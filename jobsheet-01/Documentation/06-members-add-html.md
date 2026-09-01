@@ -9,20 +9,20 @@ Just like `members/list.html`, this file is also part of the
 ```html
 <form>
     <p>
-        <label for="nama">Name</label><br>
-        <input type="text" id="nama" name="nama" required>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" required>
     </p>
     <p>
-        <label for="no_anggota">Member No.</label><br>
-        <input type="text" id="no_anggota" name="no_anggota" required>
+        <label for="member_no">Member No.</label><br>
+        <input type="text" id="member_no" name="member_no" required>
     </p>
     <p>
-        <label for="alamat">Address</label><br>
-        <input type="text" id="alamat" name="alamat">
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address">
     </p>
     <p>
-        <label for="no_hp">Phone No.</label><br>
-        <input type="text" id="no_hp" name="no_hp">
+        <label for="phone">Phone No.</label><br>
+        <input type="text" id="phone" name="phone">
     </p>
     <p>
         <button type="submit">Save</button>
@@ -48,13 +48,13 @@ member data in this jobsheet doesn't need numbers or category choices):
 
 | Field | Input Code | Required? |
 |---|---|---|
-| Name | `<input type="text" id="nama" name="nama" required>` | Yes (`required`) |
-| Member No. | `<input type="text" id="no_anggota" name="no_anggota" required>` | Yes (`required`) |
-| Address | `<input type="text" id="alamat" name="alamat">` | No |
-| Phone No. | `<input type="text" id="no_hp" name="no_hp">` | No |
+| Name | `<input type="text" id="name" name="name" required>` | Yes (`required`) |
+| Member No. | `<input type="text" id="member_no" name="member_no" required>` | Yes (`required`) |
+| Address | `<input type="text" id="address" name="address">` | No |
+| Phone No. | `<input type="text" id="phone" name="phone">` | No |
 
 Notice the `id`/`name` attributes use an **underscore**
-(`no_anggota`, `no_hp`) because the field name consists of multiple
+(`member_no`) because that field name consists of multiple
 words. This is a common naming convention in HTML/programming so that
 variable names don't contain spaces (a space in `name` can cause problems
 when the data is sent/processed).

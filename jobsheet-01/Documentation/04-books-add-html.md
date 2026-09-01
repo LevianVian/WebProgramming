@@ -9,31 +9,31 @@ file in this jobsheet to introduce the `<form>` element and various
 ```html
 <form>
     <p>
-        <label for="judul">Title</label><br>
-        <input type="text" id="judul" name="judul" required>
+        <label for="title">Title</label><br>
+        <input type="text" id="title" name="title" required>
     </p>
     <p>
-        <label for="pengarang">Author</label><br>
-        <input type="text" id="pengarang" name="pengarang" required>
+        <label for="author">Author</label><br>
+        <input type="text" id="author" name="author" required>
     </p>
     <p>
-        <label for="tahun">Publication Year</label><br>
-        <input type="number" id="tahun" name="tahun" min="1900" max="2026" required>
+        <label for="year">Publication Year</label><br>
+        <input type="number" id="year" name="year" min="1900" max="2026" required>
     </p>
     <p>
         <label for="isbn">ISBN</label><br>
         <input type="text" id="isbn" name="isbn">
     </p>
     <p>
-        <label for="stok">Stock</label><br>
-        <input type="number" id="stok" name="stok" min="0" required>
+        <label for="stock">Stock</label><br>
+        <input type="number" id="stock" name="stock" min="0" required>
     </p>
     <p>
-        <label for="kategori">Category</label><br>
-        <select id="kategori" name="kategori">
-            <option value="fiksi">Fiction</option>
-            <option value="non-fiksi">Non-Fiction</option>
-            <option value="referensi">Reference</option>
+        <label for="category">Category</label><br>
+        <select id="category" name="category">
+            <option value="fiction">Fiction</option>
+            <option value="non-fiction">Non-Fiction</option>
+            <option value="reference">Reference</option>
         </select>
     </p>
     <p>
@@ -66,14 +66,14 @@ Each field is wrapped in a `<p>` (paragraph) and contains a
 
 ```html
 <p>
-    <label for="judul">Title</label><br>
-    <input type="text" id="judul" name="judul" required>
+    <label for="title">Title</label><br>
+    <input type="text" id="title" name="title" required>
 </p>
 ```
 
-- **`<label for="judul">Title</label>`** — the caption text "Title" shown
-  next to/above the input box. The `for="judul"` attribute **connects**
-  this label to the input whose `id` is `judul`. Benefit: if the user
+- **`<label for="title">Title</label>`** — the caption text "Title" shown
+  next to/above the input box. The `for="title"` attribute **connects**
+  this label to the input whose `id` is `title`. Benefit: if the user
   clicks the "Title" label text, the browser automatically focuses the
   cursor on its input box — an important practice for accessibility and
   user convenience (especially on mobile, where the click area becomes
@@ -82,10 +82,10 @@ Each field is wrapped in a `<p>` (paragraph) and contains a
   (instead of sitting next to it).
 - **`<input>`** — the input box itself. Its important attributes:
   - `type="text"` — an input type for free-form text.
-  - `id="judul"` — this element's unique identity on the page, used to
-    connect it with the `<label for="judul">` above.
-  - `name="judul"` — the field name sent to the server when the form is
-    submitted (e.g. `judul=Laskar+Pelangi`). **`id` and `name` are
+  - `id="title"` — this element's unique identity on the page, used to
+    connect it with the `<label for="title">` above.
+  - `name="title"` — the field name sent to the server when the form is
+    submitted (e.g. `title=Laskar+Pelangi`). **`id` and `name` are
     intentionally given the same value** in this form for convenience,
     but they serve different purposes: `id` connects to
     `<label>`/CSS/JS on **this page**, while `name` is for the **data
@@ -108,22 +108,22 @@ Each field is wrapped in a `<p>` (paragraph) and contains a
 ### `<select>` and `<option>` — Dropdown Choices
 
 ```html
-<select id="kategori" name="kategori">
-    <option value="fiksi">Fiction</option>
-    <option value="non-fiksi">Non-Fiction</option>
-    <option value="referensi">Reference</option>
+<select id="category" name="category">
+    <option value="fiction">Fiction</option>
+    <option value="non-fiction">Non-Fiction</option>
+    <option value="reference">Reference</option>
 </select>
 ```
 
 - `<select>` creates a **dropdown menu** (a box that can be clicked to
   open a list of options).
 - Each `<option>` is one choice inside that dropdown.
-  - `value="fiksi"` — the value **actually sent** to the server when
+  - `value="fiction"` — the value **actually sent** to the server when
     selected.
   - `Fiction` (the text between the tags) — what is **displayed** to the
     user on screen.
   - The `value` and displayed text **don't have to match**; here they
-    happen to be similar (`non-fiksi` vs `Non-Fiction`) to keep the code
+    happen to be similar (`non-fiction` vs `Non-Fiction`) to keep the code
     and the display consistent and readable.
 - Unlike the other fields, `<select>` here does **not** have `required`
   because there's always a default selected option (the first one,

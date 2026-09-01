@@ -14,7 +14,7 @@
 | Semester | 3 |
 | Prerequisites | Algorithms & Basic Programming, Data Structures |
 | Field/Program | Business Information Systems |
-| Dosen Pengampu | Milyun Ni'ma Shoumi |
+| Instructor | Milyun Ni'ma Shoumi |
 | Learning Model | Project-Based Learning (PjBL) — Outcome Based Education (OBE) |
 
 ---
@@ -55,8 +55,8 @@
 1. Duckett, J. — *HTML & CSS: Design and Build Websites*
 2. Duckett, J. — *JavaScript and JQuery: Interactive Front-End Web Development*
 3. Matthew, N. & Stones, R. — *Beginning Databases with PostgreSQL: From Novice to Professional*
-4. Nixon, R. — *Learning PHP, MySQL & JavaScript* (gunakan sebagai referensi PHP umum, ganti bagian database dengan dokumentasi PDO_PGSQL)
-5. Dokumentasi resmi: MDN Web Docs, PHP.net (PDO_PGSQL), PostgreSQL.org, W3C
+4. Nixon, R. — *Learning PHP, MySQL & JavaScript* (use as a general PHP reference, replace the database section with PDO_PGSQL documentation)
+5. Official documentation: MDN Web Docs, PHP.net (PDO_PGSQL), PostgreSQL.org, W3C
 
 ---
 
