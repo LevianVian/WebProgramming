@@ -7,13 +7,13 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    color: #2b2b2b;
-    background-color: #f5f6f8;
+    color: #010101;
+    background-color: #fafafa;
     line-height: 1.5;
 }
 
 a {
-    color: #1d5b8a;
+    color: #007464;
     text-decoration: none;
 }
 
@@ -23,7 +23,7 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    background-color: #1d5b8a;
+    background-color: #007464;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -44,6 +44,7 @@ header nav ul {
 
 header nav a {
     color: #fff;
+    opacity: 0.8;
     font-weight: 500;
 }
 
@@ -64,7 +65,7 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #065b4f;
 }
 
 /* ===== Statistic Cards (CSS Grid) ===== */
@@ -75,12 +76,12 @@ main section:nth-of-type(2) h2 {
 
 main section:nth-of-type(2) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
 main section:nth-of-type(2) article {
-    background-color: #eef4fa;
+    background-color: #edfffa;
     border-radius: 8px;
     padding: 1.25rem;
     text-align: center;
@@ -95,7 +96,7 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #065b4f;
 }
 
 /* ===== Table ===== */
@@ -111,7 +112,7 @@ th, td {
 }
 
 thead {
-    background-color: #1d5b8a;
+    background-color: #007464;
     color: #fff;
 }
 
@@ -165,7 +166,7 @@ form select {
 }
 
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background-color: #007464;
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -175,7 +176,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-    background-color: #164869;
+    background-color: #00b295;
 }
 
 /* ===== Footer ===== */
