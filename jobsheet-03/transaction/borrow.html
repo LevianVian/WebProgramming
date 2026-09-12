@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIMPUS-Mini | Borrow Book</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../books/list.html">Book List</a></li>
+                <li><a href="../members/list.html">Member List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>New Loan</h2>
+            <p>Process a new book loan transaction.</p>
+        </section>
+
+        <section>
+            <form action="#" method="POST">
+                <label for="member">Select Member:</label>
+                <select id="member" name="member" required>
+                    <option value="">Choose Member</option>
+                    <option value="1">Levian Arta</option>
+                    <option value="2">Haikal Maghsin</option>
+                    <option value="3">Aqsa Herry</option>
+                </select>
+
+                <label for="book">Select Book (Stock > 0):</label>
+                <select id="book" name="book" required>
+                    <option value="">Choose Book:</option>
+                    <option value="1">Bumi Manusia</option>
+                    <option value="2">Laskar Pelangi</option>
+                    <option value="3">Cantik Itu Luka</option>
+                </select>
+
+                <button type="submit">Save Transaction</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 3 & 4</p>
+    </footer>
+</body>
+</html>
