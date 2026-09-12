@@ -98,6 +98,36 @@ The existing pages (Home, Add/List Books, Add/List Members — Jobsheets 1-3) do
 +--------------------------------------+
 ```
 
+
+## Wireframe: Register New Member
+
+========================================================================
+SIMPUS-Mini                                Home | Book List | Register
+========================================================================
+
++----------------------------------------------------------------------+
+|  Register as New Member                                              |
+|                                                                      |
+|  Join the library to start borrowing books.                          |
+|                                                                      |
+|  Full Name:                                                          |
+|  [__________________________________________________]                |
+|                                                                      |
+|  Email Address:                                                      |
+|  [__________________________________________________]                |
+|                                                                      |
+|  Phone Number:                                                       |
+|  [__________________________________________________]                |
+|                                                                      |
+|  [ Submit Registration ]                                             |
+|                                                                      |
+|  Already a member? [Login here]                                      |
++----------------------------------------------------------------------+
+
+========================================================================
+(c) 2026 SIMPUS-Mini
+========================================================================
+
 ## Consistency with Existing Design
 - Accent colors, navbar typography, and table/card styles follow `assets/css/style.css` built in Jobsheets 2-3.
 - Navbar will add a **Borrowing** menu and login status indicator (officer name / Logout button) starting implementation in Jobsheet 10.
