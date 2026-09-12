@@ -23,7 +23,7 @@ a:hover {
 
 /* ===== Header & Navbar (Flexbox) ===== */
 header {
-    background-color: #1d5b8a;
+    background-color: #09453B;
     color: #fff;
     padding: 1rem 1.5rem;
     display: flex;
@@ -64,7 +64,7 @@ section {
 
 section h2 {
     margin-bottom: 1rem;
-    color: #1d5b8a;
+    color: #09453B;
 }
 
 /* ===== Kartu Statistik (CSS Grid) ===== */
@@ -80,7 +80,7 @@ main section:nth-of-type(2) {
 }
 
 main section:nth-of-type(2) article {
-    background-color: #eef4fa;
+    background-color: #EEFFFE;
     border-radius: 8px;
     padding: 1.25rem;
     text-align: center;
@@ -95,7 +95,7 @@ main section:nth-of-type(2) article h3 {
 main section:nth-of-type(2) article p {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #1d5b8a;
+    color: #09453B;
 }
 
 /* ===== Tabel ===== */
@@ -111,7 +111,7 @@ th, td {
 }
 
 thead {
-    background-color: #1d5b8a;
+    background-color: #09453B;
     color: #fff;
 }
 
@@ -165,7 +165,7 @@ form select {
 }
 
 form button[type="submit"] {
-    background-color: #1d5b8a;
+    background-color: #09453B;
     color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -175,7 +175,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-    background-color: #164869;
+    background-color: #09453B;
 }
 
 /* ===== Footer ===== */
@@ -202,6 +202,10 @@ footer {
     font-size: 1.6rem;
     color: #fff;
     cursor: pointer;
+}
+
+.table-responsive {
+    overflow-x: auto;
 }
 
 /* ===== Responsive Breakpoints ===== */
@@ -247,7 +251,7 @@ footer {
     form select {
         max-width: 100%;
     }
-
+}
 
 /* Fixing the logic of the media query by asc from very big into smaller screen sizes */
 @media (min-width: 1400px) {
@@ -261,6 +265,10 @@ footer {
     main section:nth-of-type(2) {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    form input,
+    form select {
+        max-width: 85%;
 }
 
 /* Phone size */
@@ -297,6 +305,5 @@ footer {
     form select {
         max-width: 100%;
     }
-}
+}}
 
-}
