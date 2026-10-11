@@ -38,3 +38,7 @@ async function loadMemberList() {
 }
 
 document.addEventListener("DOMContentLoaded", loadMemberList);
+document.addEventListener("DOMContentLoaded", function() {
+    loadGenericList("../data/members.json", ["member_id", "name", "address", "phone"]); 
+});
+

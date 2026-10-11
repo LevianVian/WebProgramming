@@ -39,3 +39,7 @@ async function loadBookList() {
 }
 
 document.addEventListener("DOMContentLoaded", loadBookList);
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadGenericList("../data/books.json", ["title", "author", "year", "stock"]);
+});

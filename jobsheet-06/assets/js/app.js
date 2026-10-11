@@ -116,3 +116,37 @@ document.addEventListener("DOMContentLoaded", function () {
     initTableFilter();
     initFormValidation();
 });
+
+async function loadGenericList(jsonUrl, columns) {
+    const tbody = document.querySelector(".table-responsive table tbody");
+    const loading = document.getElementById("loading-indicator");
+    if (!tbody) return;
+
+    loading.style.display = "block";
+    tbody.innerHTML = "";
+
+    try {
+        await new Promise((resolve) => setTimeout(resolve, 600));
+        const res = await fetch(jsonUrl);
+        if (!res.ok) throw new Error("Failed to fetch data (status " + res.status + ")");
+
+        const dataList = await res.json();
+        dataList.forEach(function (item) {
+            const tr = document.createElement("tr");
+            let rowHTML = "";
+            
+            columns.forEach(function (col) {
+                rowHTML += "<td>" + item[col] + "</td>";
+            });
+            
+            rowHTML += "<td><button type=\"button\">Edit</button> <button type=\"button\" class=\"btn-delete\">Delete</button></td>";
+            
+            tr.innerHTML = rowHTML;
+            tbody.appendChild(tr);
+        });
+    } catch (err) {
+        tbody.innerHTML = "<tr><td colspan=\"" + (columns.length + 1) + "\">Failed to load data: " + err.message + "</td></tr>";
+    } finally {
+        loading.style.display = "none";
+    }
+}
