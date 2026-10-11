@@ -31,9 +31,11 @@ function initTableFilter() {
 
     input.addEventListener("keyup", function () {
         const keyword = input.value.toLowerCase();
-        const rows = table.querySelectorAll("tbody tr");
         rows.forEach(function (row) {
-            const text = row.textContent.toLowerCase();
+            //Buat ngecek rownya ada apa engga, kalau ada diambil, if ga ada diisi string kosong
+            const titleCell = row.querySelector("td"); 
+            const text = titleCell ? titleCell.textContent.toLowerCase() : "";
+            
             row.style.display = text.includes(keyword) ? "" : "none";
         });
     });
