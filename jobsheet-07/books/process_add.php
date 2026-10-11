@@ -25,6 +25,13 @@ if (!is_numeric($stock) || $stock < 0) {
     $errors[] = "Stock cannot be negative.";
 }
 
+// menambahkan validasi ISBN buat exercise bagian I no. 1
+if ($isbn !== '') {
+    if (!preg_match('/^[0-9\-]+$/', $isbn)) {
+        $errors[] = "ISBN can only contain digits and hyphens.";
+    }
+}
+
 if (!empty($errors)) {
     $_SESSION['flash'] = ['type' => 'error', 'message' => implode(' ', $errors)];
     header('Location: add.php');
