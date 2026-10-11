@@ -10,9 +10,6 @@ function initNavToggle() {
 }
 
 // ===== Delete confirmation (front-end only, not yet sent to the server) =====
-// Uses event delegation on document because table rows are now
-// rendered dynamically via fetch (see books.js/members.js), so the
-// .btn-delete button might not exist yet at DOMContentLoaded.
 function initDeleteConfirm() {
     document.addEventListener("click", function (e) {
         const btn = e.target.closest(".btn-delete");
@@ -36,8 +33,11 @@ function initTableFilter() {
     input.addEventListener("keyup", function () {
         const keyword = input.value.toLowerCase();
         const rows = table.querySelectorAll("tbody tr");
+        
         rows.forEach(function (row) {
-            const text = row.textContent.toLowerCase();
+            // Exercise Bagian I No. 3: Filter hanya mencari pada kolom pertama (Title)
+            const titleCell = row.querySelector("td"); 
+            const text = titleCell ? titleCell.textContent.toLowerCase() : "";
             row.style.display = text.includes(keyword) ? "" : "none";
         });
     });
@@ -60,7 +60,7 @@ function removeError(input) {
 }
 
 function initFormValidation() {
-    const form = document.getElementById("add-form");
+    const form = document.getElementById("form-add"); 
     if (!form) return;
 
     form.addEventListener("submit", function (e) {
@@ -104,6 +104,17 @@ function initFormValidation() {
             }
         }
 
+        const isbn = form.querySelector("[name='isbn']");
+        if (isbn && isbn.value.trim() !== "") {
+            const isbnRegex = /^[0-9-]+$/;
+            if (!isbnRegex.test(isbn.value.trim())) {
+                showError(isbn, "ISBN must contain only digits and hyphens.");
+                valid = false;
+            } else {
+                removeError(isbn);
+            }
+        }
+
         if (!valid) {
             e.preventDefault();
         }
@@ -117,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     initFormValidation();
 });
 
+
 async function loadGenericList(jsonUrl, columns) {
     const tbody = document.querySelector(".table-responsive table tbody");
     const loading = document.getElementById("loading-indicator");
@@ -126,7 +138,8 @@ async function loadGenericList(jsonUrl, columns) {
     tbody.innerHTML = "";
 
     try {
-        await new Promise((resolve) => setTimeout(resolve, 600));
+       // buat exercise yang ke 3 
+        await new Promise((resolve) => setTimeout(resolve, 3000));
         const res = await fetch(jsonUrl);
         if (!res.ok) throw new Error("Failed to fetch data (status " + res.status + ")");
 
