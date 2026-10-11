@@ -112,3 +112,15 @@ document.addEventListener("DOMContentLoaded", function () {
     initTableFilter();
     initFormValidation();
 });
+
+// Buat ngevalidasi ISBNnya
+const isbn = form.querySelector("[name='isbn']");
+if (isbn && isbn.value.trim() !== "") {
+    const isbnRegex = /^[0-9-]+$/;
+    if (!isbnRegex.test(isbn.value.trim())) {
+        showError(isbn, "ISBN must contain only digits and hyphens.");
+        valid = false;
+    } else {
+        clearError(isbn);
+    }
+}
